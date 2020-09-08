@@ -6,5 +6,4 @@ let reducers=combineReducers({
 });
 
 let store=createStore(reducers);
-console.log(store)
 export default store;
