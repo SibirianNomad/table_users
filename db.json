@@ -1,12 +1,24 @@
 {
-  "posts": [
+  "persons": [
     {
-      "title": "CopyRight Automatico",
-      "tags": "[JS]"
+      "id": 2,
+      "firstName": "Habib",
+      "lastName": "Hurmagemedov"
     },
     {
-      "title": "HtmlWebpackPlugin Multiples HTML files",
-      "tags": "[JS, webpack]"
+      "id": 3,
+      "firstName": "Steave",
+      "lastName": "Jobs"
+    },
+    {
+      "firstName": "Fred",
+      "lastName": "Blair",
+      "id": 4
+    },
+    {
+      "firstName": "Fred",
+      "lastName": "Blair",
+      "id": 6
     }
   ]
 }

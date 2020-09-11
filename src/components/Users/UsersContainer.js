@@ -5,13 +5,13 @@ import * as axios from "axios";
 
 class UsersContainer extends React.Component{
     componentDidMount() {
-        axios.get('http://localhost:3001/posts')
-            .then(data=>{
-                debugger
-            })
+        axios.get('http://localhost:3001/persons').then(resp=>{
+            console.log(resp)
+        })
+
     }
     render() {
-        return <Users/>
+        return <Users {...this.props}/>
     }
 }
 
