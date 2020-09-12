@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {component} from 'react';
 import UserContainer from './components/Users/UsersContainer';
+import {Route, BrowserRouter} from 'react-router-dom';
 
-function App(props) {
+const App=(props)=> {
+
   return (
       <div>
-          <UserContainer/>
+        <Route path='/' render={
+				  ()=><UserContainer/>
+			}/>
       </div>
   );
 }
