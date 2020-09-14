@@ -1,12 +1,14 @@
 import React from 'react';
 import classes from './user.module.css';
-import img from './../../img/profile.jpg'
-import edit from './../../img/edit.svg'
-import deleteElem from '../../img/deleteElem.svg'
+import img from './../../img/profile.jpg';
+import edit from './../../img/edit.svg';
+import deleteElem from '../../img/deleteElem.svg';
+import Popup from './../Popup/Popup';
 
 const Users=(props)=>{
     return(
         <div className={classes.container}>
+            <Popup/>
             <table>
                 <thead>
                     <tr>
