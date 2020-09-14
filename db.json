@@ -7,18 +7,13 @@
     },
     {
       "id": 3,
-      "firstName": "Steave",
-      "lastName": "Jobs"
+      "firstName": "Habib",
+      "lastName": "Hurmagemedov"
     },
     {
-      "firstName": "Fred",
-      "lastName": "Blair",
+      "firstName": "Jon",
+      "lastName": "Mik",
       "id": 4
-    },
-    {
-      "firstName": "Fred",
-      "lastName": "Blair",
-      "id": 6
     }
   ]
 }

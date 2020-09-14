@@ -1,12 +1,14 @@
 const SET_USERS_TABLE='SET-USERS-TABLE';
+
 let initialState={
-    users:[1,2,3]
+    users:[]
 };
 let usersReducer=(state=initialState,action)=>{
     switch(action.type){
         case SET_USERS_TABLE:{
             return {...state,users:action.users}
         }
+
     }
     return state;
 }
