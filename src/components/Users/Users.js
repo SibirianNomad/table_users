@@ -8,7 +8,7 @@ import Popup from './../Popup/Popup';
 const Users=(props)=>{
     return(
         <div className={classes.container}>
-            <Popup/>
+           
             <table>
                 <thead>
                     <tr>
@@ -27,6 +27,7 @@ const Users=(props)=>{
                 })}
                 </tbody>
             </table>
+            <Popup/>
         </div>
     );
 }
