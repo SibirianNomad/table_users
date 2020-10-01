@@ -14,4 +14,5 @@ let usersReducer=(state=initialState,action)=>{
 }
 
 export const setUsers=(users)=>({type:SET_USERS_TABLE,users:users});
+
 export default usersReducer;

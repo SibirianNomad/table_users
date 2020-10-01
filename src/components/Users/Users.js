@@ -18,13 +18,13 @@ const Users=(props)=>{
                     </tr>
                 </thead>
                 <tbody>
-                {props.users.map(u=>{
+                {/* {props.users.map(u=>{
                    return <tr key={u.id}>
                         <td><img className={classes.profile} src={img}/>{u.firstName}</td>
                         <td>{u.lastName}</td>
                         <td><img  className={classes.edit} src={edit}/><img  onClick={()=>{props.deleteUser(u.id)}} className={classes.delete} src={deleteElem}/></td>
                     </tr>
-                })}
+                })} */}
                 </tbody>
             </table>
             <Popup/>
