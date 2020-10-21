@@ -30,3 +30,36 @@ table{
     width: 30px;
     cursor: pointer;
 }
+
+.button_add{
+    margin-top: 10px;
+    border:1px solid mediumblue;
+    background-color: mediumblue;
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.button_add:hover{
+    background-color: white;
+    color:black;
+}
+.backLink{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.backLink:hover{
+    text-decoration: none;
+}
+.buttonSave{
+    float: right;
+}
+.field{
+    width: 100%;
+    height: 30px;
+}
+.title{
+    margin: 0;
+    margin-bottom: 10px;
+}
+

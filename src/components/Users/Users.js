@@ -3,7 +3,7 @@ import classes from './user.module.css';
 import img from './../../img/profile.jpg';
 import edit from './../../img/edit.svg';
 import deleteElem from '../../img/deleteElem.svg';
-import Popup from './../Popup/Popup';
+import {PopupboxContainer} from 'react-popupbox';
 
 const Users=(props)=>{
     return(
@@ -27,7 +27,8 @@ const Users=(props)=>{
                 })}
                 </tbody>
             </table>
-            <Popup/>
+            <button className={classes.button_add} onClick={props.popupOpen}>Добавить сотрудника</button>
+            <PopupboxContainer />
         </div>
     );
 }

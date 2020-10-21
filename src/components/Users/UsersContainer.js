@@ -3,6 +3,11 @@ import Users from "./Users.js";
 import {connect} from "react-redux";
 import {setUsers} from './../../redux/users-reduser';
 import * as axios from "axios";
+import {PopupboxManager} from 'react-popupbox';
+import "react-popupbox/dist/react-popupbox.css"
+import classes from './user.module.css';
+import Popup from './../Popup/Popup';
+import {reduxForm} from "redux-form";
 
 class UsersContainer extends React.Component{
     componentDidMount() {
@@ -39,15 +44,24 @@ class UsersContainer extends React.Component{
             this.props.setUsers(response.data);
         })
     }
+    openPopupbox() {
+        let onSubmit=(formData)=>{
+            console.log(formData)
+        }
+        let content=<UsersReduxForm onSubmit={onSubmit}/>
+        PopupboxManager.open({ content })
+    }
     render() {
         return <Users
             users={this.props.usersData}
             deleteUser={this.deleteUser}
             addUser={this.addUser}
             editUser={this.editUser}
+            popupOpen={this.openPopupbox}
         />
     }
 }
+const UsersReduxForm=reduxForm({form:'users'})(Popup);
 
 let mapStateToProps=(state)=>{
     return {
