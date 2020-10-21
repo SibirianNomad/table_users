@@ -22,7 +22,10 @@ const Users=(props)=>{
                    return <tr key={u.id}>
                         <td><img className={classes.profile} src={img}/>{u.firstName}</td>
                         <td>{u.lastName}</td>
-                        <td><img  className={classes.edit} src={edit}/><img  onClick={()=>{props.deleteUser(u.id)}} className={classes.delete} src={deleteElem}/></td>
+                        <td>
+                            <img  onClick={()=>{props.popupOpen(12)}} className={classes.edit} src={edit}/>
+                            <img  onClick={()=>{props.deleteUser(u.id)}} className={classes.delete} src={deleteElem}/>
+                        </td>
                     </tr>
                 })}
                 </tbody>
