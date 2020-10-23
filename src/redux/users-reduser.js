@@ -1,4 +1,7 @@
 import {userAPI} from "../api/api";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Notify from './../components/Notification/Notofocation';
 
 const SET_USERS_TABLE='SET-USERS-TABLE';
 
@@ -23,9 +26,10 @@ export const getUsers=()=>{
 }
 export const addUser=(data)=>{
     return (dispatch)=>{
-        userAPI.addUser(data.name,data.surname).then((data)=>{
+        userAPI.addUser(data.firstName,data.lastName).then((data)=>{
             if(data.status==201){
                 dispatch(getUsers());
+                Notify('added');
             }
         });
     }
@@ -35,7 +39,16 @@ export const deleteUser=(id)=>{
         userAPI.deleteUser(id).then((data)=>{
             if(data.status==200){
             dispatch(getUsers());
+            Notify('deleted');
             }
+        })
+    }
+}
+export const editUser=(data)=>{
+      return (dispatch)=>{
+        userAPI.editUser(data.id,data.firstName,data.lastName).then((data)=>{
+            dispatch(getUsers());
+            Notify('edited');
         })
     }
 }

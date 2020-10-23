@@ -1,5 +1,6 @@
 .container{
     font-family: Arial;
+    padding: 10px;
 }
 th{
     text-align: left;
@@ -61,5 +62,8 @@ table{
 .title{
     margin: 0;
     margin-bottom: 10px;
+}
+.string{
+    margin: 10px 0;
 }
 

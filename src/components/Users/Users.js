@@ -4,11 +4,12 @@ import img from './../../img/profile.jpg';
 import edit from './../../img/edit.svg';
 import deleteElem from '../../img/deleteElem.svg';
 import {PopupboxContainer} from 'react-popupbox';
+import { ToastContainer } from 'react-toastify';
+
 
 const Users=(props)=>{
     return(
         <div className={classes.container}>
-           
             <table>
                 <thead>
                     <tr>
@@ -23,7 +24,7 @@ const Users=(props)=>{
                         <td><img className={classes.profile} src={img}/>{u.firstName}</td>
                         <td>{u.lastName}</td>
                         <td>
-                            <img  onClick={()=>{props.popupOpen(12)}} className={classes.edit} src={edit}/>
+                            <img  onClick={()=>{props.popupOpen(u,true)}} className={classes.edit} src={edit}/>
                             <img  onClick={()=>{props.deleteUser(u.id)}} className={classes.delete} src={deleteElem}/>
                         </td>
                     </tr>
@@ -32,6 +33,7 @@ const Users=(props)=>{
             </table>
             <button className={classes.button_add} onClick={props.popupOpen}>Добавить сотрудника</button>
             <PopupboxContainer />
+            <ToastContainer />
         </div>
     );
 }

@@ -2,23 +2,25 @@ import React from 'react';
 import classes from "../Users/user.module.css";
 import {PopupboxManager} from 'react-popupbox';
 import {Field,reduxForm} from "redux-form";
+import {required} from "../../validators/validator";
+import {Input} from './../FormsControls/FormsControls';
 
 let Popup=(props)=>{
-    const content=(
-        <div>
-            <h2 className={classes.title}>Создание сотрудника</h2>
-            <form onSubmit={props.handleSubmit}>
-                <a className={classes.backLink} onClick={PopupboxManager.close}>Назад к списку</a>
-                <p><Field  component={'input'} name={'name'}  className={classes.field} placeholder={'Введите имя сотрудника'}/>
-                </p>
-                <p>
-                    <Field component={'input'} name={'surname'}  className={classes.field} placeholder={'Введите фамилию сотрудника'}/>
-                </p>
-                <button className={`${classes.buttonSave} ${classes.button_add}`}>Сохранить</button>
-            </form>
-        </div>
-    )
-    return content;
+  return(
+      <div>
+          <form onSubmit={props.handleSubmit}>
+              <h2 className={classes.title}>{props.title}</h2>
+              <a className={classes.backLink} onClick={PopupboxManager.close}>Назад к списку</a>
+              <div className={classes.string}>
+                  <Field validate={[required]} component={Input} name={'firstName'}  className={classes.field} placeholder={'Введите имя сотрудника'}/>
+              </div>
+              <div className={classes.string}>
+                  <Field validate={[required]} component={Input} name={'lastName'}  className={classes.field} placeholder={'Введите фамилию сотрудника'}/>
+              </div>
+              <button className={`${classes.buttonSave} ${classes.button_add}`}>Сохранить</button>
+          </form>
+      </div>
+      )
 }
 
 

@@ -17,14 +17,14 @@ export const userAPI={
             return response;
             })
     },
-    // editUser=(id,firstName,lastName)=>{
-        // axios.put('http://localhost:3001/persons'+id,{
-        //     firstName:firstName,
-        //     lastName:lastName
-        // }).then(response=>{
-        //     this.props.setUsers(response.data);
-    //     // })
-    // },
+    editUser(id,firstName,lastName){
+        return axios.put(url+'/'+id,{
+            firstName:firstName,
+            lastName:lastName
+        }).then(response=>{
+            return response;
+         })
+    },
     deleteUser(id){
         return axios.delete(url+'/'+id)
             .then(response=>{
