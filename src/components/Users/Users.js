@@ -3,12 +3,13 @@ import classes from './user.module.css';
 import img from './../../img/profile.jpg';
 import edit from './../../img/edit.svg';
 import deleteElem from '../../img/deleteElem.svg';
-import Popup from './../Popup/Popup';
+import {PopupboxContainer} from 'react-popupbox';
+import { ToastContainer } from 'react-toastify';
+
 
 const Users=(props)=>{
     return(
         <div className={classes.container}>
-           
             <table>
                 <thead>
                     <tr>
@@ -22,12 +23,17 @@ const Users=(props)=>{
                    return <tr key={u.id}>
                         <td><img className={classes.profile} src={img}/>{u.firstName}</td>
                         <td>{u.lastName}</td>
-                        <td><img  className={classes.edit} src={edit}/><img  onClick={()=>{props.deleteUser(u.id)}} className={classes.delete} src={deleteElem}/></td>
+                        <td>
+                            <img  onClick={()=>{props.popupOpen(u,true)}} className={classes.edit} src={edit}/>
+                            <img  onClick={()=>{props.deleteUser(u.id)}} className={classes.delete} src={deleteElem}/>
+                        </td>
                     </tr>
                 })} */}
                 </tbody>
             </table>
-            <Popup/>
+            <button className={classes.button_add} onClick={props.popupOpen}>Добавить сотрудника</button>
+            <PopupboxContainer />
+            <ToastContainer />
         </div>
     );
 }

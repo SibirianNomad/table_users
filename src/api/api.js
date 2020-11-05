@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as axios from "axios";
 
 const url='http://localhost:3001/persons/';
@@ -34,4 +35,40 @@ export const userAPI={
             }
         })
     }
+=======
+import  axios from "axios";
+
+const url='http://localhost:3001/persons';
+
+export const userAPI={
+    getUsers(){
+        return axios.get(url)
+            .then(response=>{
+                return response.data;
+            })
+    },
+    addUser(firstName,lastName){
+        return axios.post(url,{
+            firstName:firstName,
+            lastName:lastName
+        }).then(response=>{
+            return response;
+            })
+    },
+    editUser(id,firstName,lastName){
+        return axios.put(url+'/'+id,{
+            firstName:firstName,
+            lastName:lastName
+        }).then(response=>{
+            return response;
+         })
+    },
+    deleteUser(id){
+        return axios.delete(url+'/'+id)
+            .then(response=>{
+                return response;
+            })
+    }
+
+>>>>>>> 56815a6aa81298864db5323ccf2a6f331c2cb785
 }
