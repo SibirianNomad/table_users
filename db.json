@@ -1,54 +1,19 @@
 {
   "persons": [
     {
-      "firstName": "Евгений1",
-      "lastName": "Курченко2",
+      "firstName": "Руссимар",
+      "lastName": "Пальхарес",
       "id": 3
     },
     {
-      "firstName": "Evgeniiwte",
-      "lastName": "post",
-      "id": 8
-    },
-    {
-      "firstName": "Евгени",
-      "lastName": "koz",
-      "id": 9
-    },
-    {
-      "firstName": "Olga",
-      "lastName": "kozffghfh",
-      "id": 10
-    },
-    {
       "firstName": "Евгений",
-      "lastName": "mkh,",
-      "id": 11
-    },
-    {
-      "firstName": "Евгений",
-      "lastName": "678",
-      "id": 13
-    },
-    {
-      "firstName": "Евгений",
-      "lastName": "koz654+64",
-      "id": 14
-    },
-    {
-      "firstName": "Евгений1",
-      "lastName": "mkh,1",
-      "id": 15
-    },
-    {
-      "firstName": "Галина ",
       "lastName": "Курченко",
-      "id": 16
+      "id": 4
     },
     {
-      "firstName": "Eugene",
-      "lastName": "Курченко",
-      "id": 17
+      "firstName": "Вадим",
+      "lastName": "Немков",
+      "id": 5
     }
   ]
 }

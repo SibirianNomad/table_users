@@ -1,4 +1,5 @@
-export const required=value=>{
-    if(value)return undefined
-    return 'Field is required';
-}
+export const required = (value) => {
+  if (!value.replace(/\s/g, "")) {
+    return true;
+  }
+};

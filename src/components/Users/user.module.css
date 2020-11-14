@@ -56,8 +56,7 @@ table{
     float: right;
 }
 .field{
-    width: 100%;
-    height: 30px;
+
 }
 .title{
     margin: 0;
@@ -65,5 +64,12 @@ table{
 }
 .string{
     margin: 10px 0;
+}
+.error{
+    border: 2px solid red;
+}
+.string input{
+    width: 100%;
+    height: 30px;
 }
 
