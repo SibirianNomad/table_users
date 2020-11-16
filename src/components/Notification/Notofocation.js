@@ -1,9 +1,8 @@
-import React from "react";
 import {toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const option = {
-  position: "top-center",
+  position: 'top-center',
   autoClose: 2500,
   hideProgressBar: true,
   closeOnClick: true,

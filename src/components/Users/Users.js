@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./user.module.css";
 import img from "./../../img/profile.jpg";
-import edit from "./../../img/edit.svg";
-import deleteElem from "../../img/deleteElem.svg";
+import edit from "./../../img/edit.jpg";
+import deleteElem from "../../img/deleteElem.jpg";
 import {PopupboxContainer} from "react-popupbox";
 import {ToastContainer} from "react-toastify";
 
@@ -12,6 +12,7 @@ const Users = (props) => {
       <table>
         <thead>
           <tr>
+            <th></th>
             <th>Имя</th>
             <th>Фамилия</th>
             <th></th>
@@ -22,9 +23,9 @@ const Users = (props) => {
             return (
               <tr key={u.id}>
                 <td>
-                  <img className={classes.profile} src={img} />
-                  {u.firstName}
+                 <img className={classes.profile} src={img} alt={'Сотрудник'} />
                 </td>
+                <td>{u.firstName}</td>
                 <td>{u.lastName}</td>
                 <td>
                   <img
@@ -33,6 +34,7 @@ const Users = (props) => {
                     }}
                     className={classes.edit}
                     src={edit}
+                    alt={'Редактировать'}
                   />
                   <img
                     onClick={() => {
@@ -40,6 +42,7 @@ const Users = (props) => {
                     }}
                     className={classes.delete}
                     src={deleteElem}
+                    alt={'Удалить'}
                   />
                 </td>
               </tr>

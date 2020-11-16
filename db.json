@@ -1,11 +1,6 @@
 {
   "persons": [
     {
-      "firstName": "Руссимар",
-      "lastName": "Пальхарес",
-      "id": 3
-    },
-    {
       "firstName": "Евгений",
       "lastName": "Курченко",
       "id": 4
@@ -14,6 +9,11 @@
       "firstName": "Вадим",
       "lastName": "Немков",
       "id": 5
+    },
+    {
+      "firstName": "Владилен",
+      "lastName": "Минин",
+      "id": 6
     }
   ]
 }

@@ -1,4 +1,4 @@
-import React, {component} from "react";
+import React from "react";
 import UserContainer from "./components/Users/UsersContainer";
 import {Route} from "react-router-dom";
 

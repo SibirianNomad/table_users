@@ -11,17 +11,19 @@ let usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USERS_TABLE: {
       return {...state, users: action.users};
-    }
+    };
+    default:
+        return state;
   }
-  return state;
+ 
 };
 export const getUsers = () => {
   return (dispatch) => {
     USERAPI.getUsers().then((data) => {
-      if (data.status == 200) {
+      if (data.status === 200) {
         dispatch(setUsers(data.data));
       }
-      if (data == 404) {
+      if (data === 404) {
         Notify(404);
       }
     });
@@ -30,11 +32,11 @@ export const getUsers = () => {
 export const addUser = (data) => {
   return (dispatch) => {
     USERAPI.addUser(data.firstName, data.lastName).then((data) => {
-      if (data.status == 201) {
+      if (data.status === 201) {
         dispatch(getUsers());
         Notify("added");
       }
-      if (data == 404) {
+      if (data === 404) {
         Notify(404);
       }
     });
@@ -43,11 +45,11 @@ export const addUser = (data) => {
 export const deleteUser = (id) => {
   return (dispatch) => {
     USERAPI.deleteUser(id).then((data) => {
-      if (data.status == 200) {
+      if (data.status === 200) {
         dispatch(getUsers());
         Notify("deleted");
       }
-      if (data == 404) {
+      if (data === 404) {
         Notify(404);
       }
     });
@@ -56,11 +58,11 @@ export const deleteUser = (id) => {
 export const editUser = (data) => {
   return (dispatch) => {
     USERAPI.editUser(data.id, data.firstName, data.lastName).then((data) => {
-      if (data.status == 200) {
+      if (data.status === 200) {
         dispatch(getUsers());
         Notify("edited");
       }
-      if (data == 404) {
+      if (data === 404) {
         Notify(404);
       }
     });
@@ -69,10 +71,10 @@ export const editUser = (data) => {
 export const getUser = (id) => {
   return (dispatch) => {
     return USERAPI.getUser(id).then((data) => {
-      if (data.status == 200) {
+      if (data.status === 200) {
         return data.data;
       }
-      if (data == 404) {
+      if (data === 404) {
         Notify(404);
       }
     });

@@ -18,7 +18,7 @@ class PopupContainer extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if (prevProps.data.id != this.props.data.id) {
+    if (prevProps.data.id !== this.props.data.id) {
       this.setState({
         id: this.props.data.id,
         firstName: this.props.data.firstName,
@@ -27,13 +27,13 @@ class PopupContainer extends React.Component {
     }
   }
   componentWillReceiveProps(nextProps, nextContext) {
-    if (nextProps.data.firstName != this.state.firstName) {
+    if (nextProps.data.firstName !== this.state.firstName) {
       this.setState({
         firstName: nextProps.data.firstName,
         firstNameValid: false,
       });
     }
-    if (nextProps.data.lastName != this.state.lastName) {
+    if (nextProps.data.lastName !== this.state.lastName) {
       this.setState({
         lastName: nextProps.data.lastName,
         lastNameValid: false,
@@ -42,7 +42,7 @@ class PopupContainer extends React.Component {
   }
 
   handleChange = (e) => {
-    if (e.currentTarget.name == "firstName") {
+    if (e.currentTarget.name === "firstName") {
       this.setState({firstName: e.currentTarget.value});
       this.setState({firstNameValid: false});
     } else {
